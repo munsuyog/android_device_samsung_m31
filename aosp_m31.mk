@@ -27,18 +27,15 @@ TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
-## Quick Tap
-TARGET_SUPPORTS_QUICK_TAP := true
-
 ## Inherit some common lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 ## Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 ## Device identifier, this must come after all inclusions
 PRODUCT_DEVICE := m31
-PRODUCT_NAME := lineage_m31
+PRODUCT_NAME := aosp_m31
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-M315F
 PRODUCT_MANUFACTURER := samsung
